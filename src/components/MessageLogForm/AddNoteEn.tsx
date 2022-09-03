@@ -36,7 +36,7 @@ function AddNoteEn(props: AddNoteENProps) {
       props.setIsbuttonPressed(false);
       titleRef.current!.value = "";
       textRef.current!.value = "";
-    } else {
+    } else if (!titleRef.current?.value || !textRef.current?.value) {
       alert("Please input required fields.");
     }
   }

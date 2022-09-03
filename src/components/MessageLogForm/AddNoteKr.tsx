@@ -38,7 +38,7 @@ function AddNoteKr(props: AddNoteKRProps) {
       props.setIsbuttonPressed(false);
       titleRef.current!.value = "";
       textRef.current!.value = "";
-    } else {
+    } else if (!temp || !temp2) {
       alert("제목과 내용을 모두 입력해주세요.");
     }
     console.log({ temp, temp2 });
